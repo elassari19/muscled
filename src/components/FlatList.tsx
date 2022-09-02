@@ -5,9 +5,11 @@ import React from "react";
 
 interface IProps {
   items: string[];
+  ExtractKey: (idx: number) => void;
+  ExtractData: (item: any) => void;
 }
 
-const FlatList: NextPage<IProps> = ({ items }) => {
+const FlatList: NextPage<IProps> = ({ items, ExtractKey, ExtractData }) => {
   return (
     <FlexColumn>
       {items.map((item: string, idx: number) => (

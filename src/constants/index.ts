@@ -14,6 +14,8 @@ import {
   BeginRightAway,
 } from "./TableData";
 
+import { servises, knowledgeBase, company, resources } from "./footerData";
+
 export {
   headerOptions,
   TotalInitialProject,
@@ -28,4 +30,8 @@ export {
   HowMuchDoesItCost,
   MuscledIsaFullService,
   BeginRightAway,
+  servises,
+  knowledgeBase,
+  company,
+  resources,
 };

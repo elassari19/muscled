@@ -1,88 +1,208 @@
-import { Typogrphy } from "components";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react-hooks/rules-of-hooks */
+import { InputForm, Typogrphy, Buttons } from "components";
 import { FlexColumn, FlexRow } from "layout";
 import { NextPage } from "next";
-import { Business, Honor, Millenials, Places, Premier } from "public";
+import {
+  Arrow,
+  Business,
+  ContactPhoto,
+  Honor,
+  Millenials,
+  Places,
+  Premier,
+  Roket,
+} from "public";
 import FlatList from "flatlist-react";
-import React from "react";
+import React, { useState } from "react";
+import { company, knowledgeBase, resources, servises } from "constants/";
 
 const index: NextPage = () => {
+  const [value, setValue] = useState<string>("");
   return (
     <FlexColumn className="bg-black-10">
-      <FlexRow className="md:px-[100px] text-white py-[80px] justify-between">
-        <FlatList
-          renderItem={(item: string, idx: number) => (
-            <Typogrphy
-              key={idx}
-              onClick={() => console.log(idx)}
-              sm={idx == 0}
-              xs={idx != 0}
-              extraBold={idx == 0}
-              className={`my-2 cursor-pointer ${
-                idx != 0 && "text-gray-400 text-lg"
-              }  hover:text-white`}
-            >
-              {item}
+      {/* discover */}
+      <FlexColumn className=" bg-red">
+        <FlexRow className="md:pl-[100px]">
+          {/* left side */}
+          <FlexColumn className="w-[842px] py-[80px] pr-[80px]">
+            <FlexRow className="mb-12">
+              <Roket fontSize={150} />
+              <FlexColumn>
+                <Typogrphy xs className="text-white">
+                  We've driven over
+                </Typogrphy>
+                <FlexRow>
+                  {"666666".split("").map((item: string, idx: number) => (
+                    <Typogrphy
+                      key={idx}
+                      md
+                      bolder
+                      className="w-[66px] h-[78px] p-[20px] m-[5px] text-red rounded-md bg-gradient-to-b  from-white to-[#CBDDFF]"
+                    >
+                      {item}
+                    </Typogrphy>
+                  ))}
+                </FlexRow>
+                <Typogrphy xs className="text-white">
+                  leads for clients.
+                </Typogrphy>
+              </FlexColumn>
+            </FlexRow>
+
+            <Typogrphy xs className="text-white">
+              Discover how we can help your business grow
             </Typogrphy>
-          )}
-          list={[
-            "Services",
-            "Digital Marketing Services",
-            "SEO Services",
-            "PPC Services",
-            "Web Design Services",
-            "Social Media Services",
-            "Digital Advertising Services",
-            "Content Marketing Services",
-          ]}
-        />
-        {/* <FlatList
-          items={[
-            "Services",
-            "Digital Marketing Services",
-            "SEO Services",
-            "PPC Services",
-            "Web Design Services",
-            "Social Media Services",
-            "Digital Advertising Services",
-            "Content Marketing Services",
-          ]}
-        />
-        <FlatList
-          items={[
-            "Knowledge Base",
-            "Digital Marketing",
-            "Content Marketing",
-            "Social Media",
-            "Web Design ",
-            "SEO",
-            "PPC",
-            "Amazon",
-          ]}
-        />
-        <FlatList
-          items={[
-            "Company",
-            "Digital Marketing Agency",
-            "SEO Agency",
-            "PPC Agency",
-            "Content Marketing Agency",
-            "Social Media Agency",
-            "Web Design Agency",
-            "Industries We Serve",
-          ]}
-        />
-        <FlatList
-          items={[
-            "Resources",
-            "About Us",
-            "Contact Us",
-            "Careers",
-            "Phishing Scam Alert",
-            "Locations",
-            "Community Impact",
-            "Tools",
-          ]}
-        /> */}
+
+            <FlexRow className="mt-[20px] w-[658px] py-[12px] px-[20px] bg-[#fff6] mb-4 rounded-md ">
+              <InputForm
+                className="flex-1 w-[404px] text-black bg-[#fff0] placeholder:text-black"
+                value={value}
+                placeholder="Enter Your Website Link"
+                onChange={setValue}
+              />
+              <Buttons title="Send Proposal" height="h-[50px]" />
+            </FlexRow>
+          </FlexColumn>
+
+          {/* right side */}
+          <FlexColumn className="max-w-[600px] w-auto pr-[100px] bg-red-50 text-white px-[15px] py-[80px]">
+            <Typogrphy
+              sm
+              className="leading-10 text-center letter-spacing:tracking-tighter ;"
+            >
+              MUSCLED has been a pleasure to work with on our SEO needs and I
+              look forward to working with them on future projects.
+            </Typogrphy>
+            <FlexColumn className="text-right">
+              <Typogrphy xs extraBold className=" mt-9">
+                Owner
+              </Typogrphy>
+              <Typogrphy className="mt-3 text-sm">
+                ARIZONA GARAGE DOOR SUPPLIER
+              </Typogrphy>
+              <FlexRow className="justify-end mt-5">
+                <Arrow fontSize={22} opacity={0.5} className="rotate-180" />
+                <span className="w-3" />
+                <Arrow fontSize={20} />
+              </FlexRow>
+            </FlexColumn>
+          </FlexColumn>
+        </FlexRow>
+
+        {/* contact */}
+        <FlexRow className="flex-wrap md:flex-nowrap -mt-10 text-white rounded-tl-[60px] rounded-tr-[60px] bg-red-90 md:px-[100px] py-[40px] items-center">
+          <FlexRow className="w-[842px]">
+            <ContactPhoto fontSize={120} />
+            <FlexColumn className="ml-7">
+              <Typogrphy xs className="mb-4">
+                Ready to speak with a marketing expert? Give us a ring
+              </Typogrphy>
+              <Typogrphy md>508-504-9466</Typogrphy>
+            </FlexColumn>
+          </FlexRow>
+
+          <FlexRow className="justify-between w-[600px]">
+            <div>
+              <Typogrphy xs>1.6 million</Typogrphy>
+              <Typogrphy fontSize={12}>Hours of expertise</Typogrphy>
+            </div>
+
+            <div>
+              <Typogrphy xs>450+</Typogrphy>
+              <Typogrphy fontSize={12}>Digital Marketing</Typogrphy>
+              <Typogrphy fontSize={12}>Masters On Staff</Typogrphy>
+            </div>
+
+            <div>
+              <Typogrphy xs>1,128</Typogrphy>
+              <Typogrphy fontSize={12}>Website Launched</Typogrphy>
+            </div>
+          </FlexRow>
+        </FlexRow>
+      </FlexColumn>
+      {/* End discover */}
+      <FlexRow className="md:px-[100px] text-white py-[80px] justify-between">
+        <FlexColumn>
+          <FlatList
+            renderItem={(item: string, idx: number) => (
+              <Typogrphy
+                key={idx}
+                onClick={() => console.log(item)}
+                xs={idx != 0}
+                sm={idx == 0}
+                bold={idx == 0}
+                className={`my-2 cursor-pointer ${
+                  idx != 0 && "text-gray-400 text-sm"
+                }  hover:text-white`}
+              >
+                {item}
+              </Typogrphy>
+            )}
+            list={servises}
+          />
+        </FlexColumn>
+
+        <FlexColumn>
+          <FlatList
+            renderItem={(item: string, idx: number) => (
+              <Typogrphy
+                key={idx}
+                onClick={() => console.log(item)}
+                xs={idx != 0}
+                sm={idx == 0}
+                bold={idx == 0}
+                className={`my-2 cursor-pointer ${
+                  idx != 0 && "text-gray-400 text-sm"
+                }  hover:text-white`}
+              >
+                {item}
+              </Typogrphy>
+            )}
+            list={knowledgeBase}
+          />
+        </FlexColumn>
+
+        <FlexColumn>
+          <FlatList
+            renderItem={(item: string, idx: number) => (
+              <Typogrphy
+                key={idx}
+                onClick={() => console.log(item)}
+                xs={idx != 0}
+                sm={idx == 0}
+                bold={idx == 0}
+                className={`my-2 cursor-pointer ${
+                  idx != 0 && "text-gray-400 text-sm"
+                }  hover:text-white`}
+              >
+                {item}
+              </Typogrphy>
+            )}
+            list={company}
+          />
+        </FlexColumn>
+
+        <FlexColumn>
+          <FlatList
+            renderItem={(item: string, idx: number) => (
+              <Typogrphy
+                key={idx}
+                onClick={() => console.log(item)}
+                xs={idx != 0}
+                sm={idx == 0}
+                bold={idx == 0}
+                className={`my-2 cursor-pointer ${
+                  idx != 0 && "text-gray-400 text-sm"
+                }  hover:text-white`}
+              >
+                {item}
+              </Typogrphy>
+            )}
+            list={resources}
+          />
+        </FlexColumn>
+
         <FlexColumn className="items-end">
           <Typogrphy className="py-2 text-sm text-gray-400">
             REVENUE DRIVEN FOR OUR CLIENTS
