@@ -212,7 +212,9 @@ const index: NextPage = () => {
           </Typogrphy>
         </FlexColumn>
       </FlexRow>
+
       <div className="mx-[80px] h-[1px] bg-gray-400" />
+
       <FlexRow className="px-[100px] py-[80px] text-gray-400 items-center justify-between">
         <div>
           <Typogrphy className="mb-3 text-sm">
