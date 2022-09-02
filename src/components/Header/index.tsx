@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { headerOptions } from "../../constants";
 import { NextPage } from "next";
 import Link from "next/link";
@@ -11,10 +11,13 @@ import FlatList from "flatlist-react";
 
 const index: NextPage = () => {
   const [value, setValue] = useState<number>(-1);
-  const amimate = {
+  const animation = {
     opacity: 1,
     height: "auto",
     display: "absolute",
+    top: "100px",
+    left: 0,
+    right: 0,
     transition: {
       duration: 0.5,
     },
@@ -63,9 +66,11 @@ const index: NextPage = () => {
           pointer
         />
       </FlexRow>
+
       <motion.div
-        className={`h-80 w-full bg-white`}
-        animate={value > -1 ? amimate : initial}
+        className={`w-full bg-white`}
+        initial={initial}
+        animate={value == -1 ? initial : animation}
       >
         <FlexRow className="pl-[250px] pr-[250px] text-black justify-between text-center">
           <FlexColumn className="w-auto">
