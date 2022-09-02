@@ -13,6 +13,7 @@ interface IProps {
   sm?: boolean;
   md?: boolean;
   lg?: boolean;
+  onClick?: () => void;
 }
 
 const TypoH1: NextPage<IProps> = ({
@@ -27,9 +28,11 @@ const TypoH1: NextPage<IProps> = ({
   sm,
   md,
   lg,
+  onClick,
 }) => {
   return (
     <p
+      onClick={onClick}
       className={`
       ml-0
       ${bold && "font-bold"} 

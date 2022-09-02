@@ -9,6 +9,7 @@ import TableOfServices from "./TableOfServices";
 import HeroScetion from "./HeroScetion";
 import TableOfContent from "./TableOfContent";
 import CardServices from "./CardServices";
+import FlatList from "./FlatList";
 
 export {
   Footer,
@@ -22,4 +23,5 @@ export {
   TableOfContent,
   TableOfServices,
   CardServices,
+  FlatList,
 };

@@ -16,6 +16,11 @@ import TableVector from "./TableVector.svg";
 import Roket from "./Roket.svg";
 import Arrow from "./Arrow.svg";
 import ContactPhoto from "./ContactPhoto.svg";
+import Places from "./Places.svg";
+import Premier from "./Premier.svg";
+import Honor from "./Honor.svg";
+import Millenials from "./Millenials.svg";
+import Business from "./Business.svg";
 
 export {
   MUSCLED,
@@ -36,4 +41,9 @@ export {
   Roket,
   Arrow,
   ContactPhoto,
+  Places,
+  Premier,
+  Honor,
+  Millenials,
+  Business,
 };

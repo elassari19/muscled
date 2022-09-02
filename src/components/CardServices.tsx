@@ -9,10 +9,10 @@ interface IProps {
 
 const CardServices: NextPage<IProps> = ({ services }) => {
   return (
-    <FlexColumn className="w-[390px] mx-[20px] h-[360px] justify-between bg-red-10 p-[30px]">
+    <FlexColumn className="w-[390px] mx-[20px] h-[360px] my-3 justify-between bg-red-10 p-[30px]">
       {services.map((item: string, idx: number) => {
         return idx == 0 ? (
-          <Typogrphy extraBold sm>
+          <Typogrphy extraBold sm key={idx}>
             {item}
           </Typogrphy>
         ) : (

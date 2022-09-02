@@ -25,6 +25,7 @@ import {
 } from "constants/index";
 import { FlexColumn, FlexRow } from "layout";
 import type { NextPage } from "next";
+import Head from "next/head";
 
 import {
   Arrow,
@@ -47,14 +48,29 @@ const Home: NextPage = () => {
 
   return (
     <FlexColumn>
+      <Head>
+        <title>MUSCLED</title>
+        <meta
+          name="description"
+          content="Website speed optimization services are an often-overlooked strategy for great SEO. Your website will probably lose sales and income if it does not load quickly for visitors. Almost half of the web searchers will abandon a site after three seconds of waiting for it to load. Is your website fast enough to keep users coming back? If not, Muscled site speed optimization services can help."
+          key="muscled services"
+        />
+        <meta property="Keywords" />
+      </Head>
+
       {/* Hero */}
-      <FlexRow className="p-[100px] bg-gray-800 ">
+      <FlexRow className="flex flex-wrap-reverse md:p-[100px] bg-gray-800 ">
         <aside className="text-white w-[640px] text-left ">
           <HeroScetion
+            text={[{ subTitle: "Home > WEB DEVELOPMENT > SERVICES" }]}
+          />
+          <h1 className="text-[60px] font-extrabold leading-11 mb-5">
+            Services for
+            <br />
+            Improving Site Speed
+          </h1>
+          <HeroScetion
             text={[
-              { subTitle: "Home > WEB DEVELOPMENT > SERVICES" },
-              { begTitle: "Services for" },
-              { begTitle: "Improving Site Speed" },
               {
                 subTitle:
                   "Website speed optimization services are an often-overlooked strategy for great SEO. Your website will probably lose sales and income if it does not load quickly for visitors. Almost half of the web searchers will abandon a site after three seconds of waiting for it to load. Is your website fast enough to keep users coming back? If not, Muscled site speed optimization services can help. To speak with a specialist, please contact us.",
@@ -80,11 +96,11 @@ const Home: NextPage = () => {
       {/* End Hero */}
 
       {/* Partner */}
-      <FlexColumn className="px-[100px] py-[40px] itesm-center bg-white w-full">
+      <FlexColumn className="md:px-[100px] py-[40px] itesm-center bg-white w-full">
         <Typogrphy md extraBold className="py-5 text-center text-blackLight">
           Our Partners
         </Typogrphy>
-        <FlexRow className="justify-between w-full">
+        <FlexRow className="justify-between w-[1442px] overflow-x-scroll md:w-full ‚">
           {[Logo1, Logo2, Logo4, Logo5, Logo6, Logo7].map(
             (
               Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
@@ -98,12 +114,12 @@ const Home: NextPage = () => {
       {/* End Partner */}
 
       {/* Packeges */}
-      <FlexColumn className="bg-[#F5F5F5] px-[100px] py-[40px] text-center">
+      <FlexColumn className="bg-[#F5F5F5] py-[40px] text-center md:px-[100px]">
         <Typogrphy extraBold md className="pb-[40px]">
           Explore Site Speed Optimization Service Packages
         </Typogrphy>
 
-        <FlexRow className="flex justify-center">
+        <FlexRow className="flex-wrap justify-center">
           <PlanCard
             stars={1}
             title="Standard Plan"
@@ -142,7 +158,7 @@ const Home: NextPage = () => {
             See Full Deliverables
           </Typogrphy>
         </FlexRow>
-        <FlexRow className="px-[100px] py-[80px] mt-2 bg-[#C4000040]">
+        <FlexRow className="md:px-[100px] py-[80px] mt-2 bg-[#C4000040]">
           <FlexColumn className="itesm-center">
             <HeroScetion
               className="text-center"
@@ -178,7 +194,7 @@ const Home: NextPage = () => {
 
       {/* Testimonials */}
       <FlexRow
-        className="px-[100px] py-[80px] h-[626px] bg-black text-white"
+        className="md:px-[100px] py-[80px] h-[626px] bg-black text-white"
         height={626}
       >
         <FlexColumn className="justify-between flex-1" height={400}>
@@ -208,7 +224,7 @@ const Home: NextPage = () => {
       {/* End Testimonials */}
 
       {/* Optimization Services */}
-      <FlexColumn className="px-[100px] py-[40px] items-center">
+      <FlexColumn className="md:px-[100px] py-[40px] items-center">
         <HeroScetion
           text={[
             { title: "Muscled provides Site Speed Optimization Services" },
@@ -241,7 +257,7 @@ const Home: NextPage = () => {
       {/* End Optimization Services */}
 
       {/* Page and Speed */}
-      <FlexRow className="px-[100px] py-10 items-start!">
+      <FlexRow className="md:px-[100px] py-10 items-start flex-wrap">
         <FlexColumn className="w-[740px] mr-[40px]">
           {/* pass data of text as an array */}
           <HeroScetion text={differenceBetweenPages} />
@@ -253,14 +269,14 @@ const Home: NextPage = () => {
       {/* End Page and Speed */}
 
       {/* End Page and Speed */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={optimizationServices} className="w-[700px]" />
       </FlexColumn>
       {/* End Page and Speed */}
 
       {/* End The Advantages */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion
           text={TheAdvantagesOfSiteSpeedOptimization}
@@ -270,49 +286,49 @@ const Home: NextPage = () => {
       {/* End The Advantages */}
 
       {/* End Four Factors */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={FourFactors} className="w-[700px]" />
       </FlexColumn>
       {/* End Four Factors */}
 
       {/* End website Optimization Tools */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={websiteOptimizationTools} className="w-[700px]" />
       </FlexColumn>
       {/* End website Optimization Tools */}
 
       {/* End website Require Assistance */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={websiteRequireAssistance} className="w-[700px]" />
       </FlexColumn>
       {/* End website Require Assistance */}
 
       {/* End How Much DoesIt Cost */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={HowMuchDoesItCost} className="w-[700px]" />
       </FlexColumn>
       {/* End How Much DoesIt Cost */}
 
       {/* End Muscled Is a Full Service */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={MuscledIsaFullService} className="w-[700px]" />
       </FlexColumn>
       {/* End Muscled Is a Full Service */}
 
       {/* End Begin Right Away */}
-      <FlexColumn className="px-[100px] py-10">
+      <FlexColumn className="md:px-[100px] py-10">
         {/* pass data of text as an array */}
         <HeroScetion text={BeginRightAway} className="w-[700px]" />
       </FlexColumn>
       {/* End Begin Right Away */}
 
       {/* cartes */}
-      <FlexRow className="px-[80px] py-10 justify-between">
+      <FlexRow className="flex-wrap md:flex-nowrap md:px-[80px] py-10 justify-between">
         <CardServices
           services={[
             "Website Optimization Services",
@@ -342,7 +358,7 @@ const Home: NextPage = () => {
 
       {/* discover */}
       <FlexColumn className=" bg-red">
-        <FlexRow className="pl-[100px]">
+        <FlexRow className="md:pl-[100px]">
           {/* left side */}
           <FlexColumn className="w-[842px] py-[80px] pr-[80px]">
             <FlexRow className="mb-12">
@@ -385,7 +401,7 @@ const Home: NextPage = () => {
           </FlexColumn>
 
           {/* right side */}
-          <FlexColumn className="w-[600px] pr-[100px] bg-red-50 text-white px-[15px] py-[80px]">
+          <FlexColumn className="min-w-[600px] pr-[100px] bg-red-50 text-white px-[15px] py-[80px]">
             <Typogrphy
               sm
               className="leading-10 text-center letter-spacing:tracking-tighter ;"
@@ -394,10 +410,10 @@ const Home: NextPage = () => {
               look forward to working with them on future projects.
             </Typogrphy>
             <FlexColumn className="text-right">
-              <Typogrphy sm className=" mt-9">
+              <Typogrphy xs extraBold className=" mt-9">
                 Owner
               </Typogrphy>
-              <Typogrphy xs className="mt-3 ">
+              <Typogrphy className="mt-3 text-lg">
                 ARIZONA GARAGE DOOR SUPPLIER
               </Typogrphy>
               <FlexRow className="justify-end mt-5">
@@ -410,7 +426,7 @@ const Home: NextPage = () => {
         </FlexRow>
 
         {/* contact */}
-        <FlexRow className="-mt-10 text-white rounded-tl-[60px] rounded-tr-[60px] bg-red-90 px-[100px] py-[40px] items-center">
+        <FlexRow className="flex-wrap md:flex-nowrap -mt-10 text-white rounded-tl-[60px] rounded-tr-[60px] bg-red-90 md:px-[100px] py-[40px] items-center">
           <FlexRow className="w-[842px]">
             <ContactPhoto fontSize={120} />
             <FlexColumn className="ml-7">
