@@ -27,7 +27,7 @@ const index: NextPage<IProps> = ({
   opacity,
 }) => {
   return (
-    <FlexColumn className=" rounded-[10px] border border-black border-solid mx-[10px] ">
+    <FlexColumn className=" rounded-[10px] border border-black border-solid mx-[10px] my-1">
       <FlexColumn
         height={300}
         className={`${bgcolor} rounded-[10px] justify-around p-[40px] w-full ${className}`}

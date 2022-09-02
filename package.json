@@ -13,6 +13,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "flatlist-react": "^1.5.0",
+    "framer-motion": "^7.2.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"

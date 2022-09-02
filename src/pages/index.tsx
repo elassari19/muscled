@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       </Head>
 
       {/* Hero */}
-      <FlexRow className="flex flex-wrap-reverse md:p-[100px] bg-gray-800 ">
+      <FlexRow className="flex flex-wrap-reverse md:flex-nowrap md:p-[100px] bg-gray-800 ">
         <aside className="text-white w-[640px] text-left ">
           <HeroScetion
             text={[{ subTitle: "Home > WEB DEVELOPMENT > SERVICES" }]}
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
           Explore Site Speed Optimization Service Packages
         </Typogrphy>
 
-        <FlexRow className="flex-wrap justify-center">
+        <FlexRow className="flex-wrap justify-center md:flex-nowrap">
           <PlanCard
             stars={1}
             title="Standard Plan"
@@ -257,7 +257,7 @@ const Home: NextPage = () => {
       {/* End Optimization Services */}
 
       {/* Page and Speed */}
-      <FlexRow className="md:px-[100px] py-10 items-start flex-wrap">
+      <FlexRow className="md:px-[100px] py-10 items-start flex-wrap md:flex-nowrap">
         <FlexColumn className="w-[740px] mr-[40px]">
           {/* pass data of text as an array */}
           <HeroScetion text={differenceBetweenPages} />
@@ -401,7 +401,7 @@ const Home: NextPage = () => {
           </FlexColumn>
 
           {/* right side */}
-          <FlexColumn className="min-w-[600px] pr-[100px] bg-red-50 text-white px-[15px] py-[80px]">
+          <FlexColumn className="max-w-[600px] w-auto pr-[100px] bg-red-50 text-white px-[15px] py-[80px]">
             <Typogrphy
               sm
               className="leading-10 text-center letter-spacing:tracking-tighter ;"
@@ -413,7 +413,7 @@ const Home: NextPage = () => {
               <Typogrphy xs extraBold className=" mt-9">
                 Owner
               </Typogrphy>
-              <Typogrphy className="mt-3 text-lg">
+              <Typogrphy className="mt-3 text-sm">
                 ARIZONA GARAGE DOOR SUPPLIER
               </Typogrphy>
               <FlexRow className="justify-end mt-5">

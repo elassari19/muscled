@@ -1,7 +1,8 @@
-import { FlatList, Typogrphy } from "components";
+import { Typogrphy } from "components";
 import { FlexColumn, FlexRow } from "layout";
 import { NextPage } from "next";
 import { Business, Honor, Millenials, Places, Premier } from "public";
+import FlatList from "flatlist-react";
 import React from "react";
 
 const index: NextPage = () => {
@@ -9,6 +10,32 @@ const index: NextPage = () => {
     <FlexColumn className="bg-black-10">
       <FlexRow className="md:px-[100px] text-white py-[80px] justify-between">
         <FlatList
+          renderItem={(item: string, idx: number) => (
+            <Typogrphy
+              key={idx}
+              onClick={() => console.log(idx)}
+              sm={idx == 0}
+              xs={idx != 0}
+              extraBold={idx == 0}
+              className={`my-2 cursor-pointer ${
+                idx != 0 && "text-gray-400 text-lg"
+              }  hover:text-white`}
+            >
+              {item}
+            </Typogrphy>
+          )}
+          list={[
+            "Services",
+            "Digital Marketing Services",
+            "SEO Services",
+            "PPC Services",
+            "Web Design Services",
+            "Social Media Services",
+            "Digital Advertising Services",
+            "Content Marketing Services",
+          ]}
+        />
+        {/* <FlatList
           items={[
             "Services",
             "Digital Marketing Services",
@@ -55,7 +82,7 @@ const index: NextPage = () => {
             "Community Impact",
             "Tools",
           ]}
-        />
+        /> */}
         <FlexColumn className="items-end">
           <Typogrphy className="py-2 text-sm text-gray-400">
             REVENUE DRIVEN FOR OUR CLIENTS
