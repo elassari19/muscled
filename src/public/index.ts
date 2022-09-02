@@ -9,6 +9,13 @@ import Logo6 from "./Logo6.svg";
 import Logo7 from "./Logo7.svg";
 import Star from "./Star.svg";
 import Vector1 from "./Vector1.svg";
+import Check from "./Check.svg";
+import Phone from "./Phone.svg";
+import DoubleArrow from "./DoubleArrow.svg";
+import TableVector from "./TableVector.svg";
+import Roket from "./Roket.svg";
+import Arrow from "./Arrow.svg";
+import ContactPhoto from "./ContactPhoto.svg";
 
 export {
   MUSCLED,
@@ -22,4 +29,11 @@ export {
   Logo7,
   Star,
   Vector1,
+  Check,
+  Phone,
+  DoubleArrow,
+  TableVector,
+  Roket,
+  Arrow,
+  ContactPhoto,
 };

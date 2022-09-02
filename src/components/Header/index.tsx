@@ -4,35 +4,37 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { MUSCLED, Vector } from "public";
-import { CustomButton } from "components";
+import { Buttons } from "components";
+import { FlexRow } from "layout";
 
 const index: NextPage = () => {
   return (
-    <div className="flex items-center justify-around py-4">
-      <div className="cursor-pointer">
+    <FlexRow className="justify-between px-8 py-3">
+      <div>
         <Link href={"/"}>
-          <Image src={MUSCLED} alt="muscled" />
+          <MUSCLED className="h-10 cursor-pointer text-9xl" />
         </Link>
       </div>
       {headerOptions.map((item: string) => (
-        <div
+        <FlexRow
           key={item}
-          className="flex-row justify-center hidden cursor-pointer place-items-center text-2xs center hover:text-red-600 md:flex "
+          className="hidden cursor-pointer text-2xs hover:text-red-600 md:flex"
         >
           <Link href={`/${item}`}>{item}</Link>
           <div className="pl-1">
-            <Image src={Vector} alt="vector" />
+            <Vector fill="red" />
           </div>
-        </div>
+        </FlexRow>
       ))}
 
-      <CustomButton
+      <Buttons
         title="Send Proposal"
-        bgColor={"bg-black"}
-        color="text-white"
         rounded="rounded-full"
+        height="h-[40px]"
+        width="w-[180px]"
+        pointer
       />
-    </div>
+    </FlexRow>
   );
 };
 
