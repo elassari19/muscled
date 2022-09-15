@@ -16,3 +16,52 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.animation {
+  animation: spring 1s ease-in-out 0.5s;
+}
+
+@keyframes spring {
+  0% {
+    scale: 0.7;
+  }
+  25% {
+    scale: 1.5;
+  }
+  50% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.7;
+  }
+  100% {
+    scale: 1.4;
+  }
+}
+
+.textAnimate {
+  animation: text 1s ease-in-out;
+}
+
+@keyframes text {
+  0% {
+    scale: 0;
+    rotate: 0deg;
+  }
+  25% {
+    scale: 0.5;
+    rotate: 180deg;
+  }
+  50% {
+    scale: 1;
+    rotate: 320deg;
+  }
+  75% {
+    scale: 1.5;
+    rotate: 500deg;
+  }
+  100% {
+    scale: 2;
+    rotate: 720deg;
+  }
+}
