@@ -6,6 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #ededed;
 }
 
 a {
@@ -74,7 +75,7 @@ a {
   width: fit-content;
   border-radius: 8rem;
   overflow: hidden;
-  margin: 5rem auto;
+  margin: 15rem auto;
 }
 .input {
   padding: 1.5rem 2rem;
